@@ -1,0 +1,1 @@
+{"version":3,"file":"getAll.js","sourceRoot":"","sources":["../../../src/controllers/notes/getAll.ts"],"names":[],"mappings":";;;;;;;;;;;;AACA,kDAA+C;AAExC,MAAM,MAAM,GAAG,CAAO,GAAY,EAAE,GAAa,EAAE,EAAE;IAC1D,MAAM,MAAM,GAAG,MAAM,WAAI,CAAC,IAAI,CAAC,EAAE,EAAE,YAAY,CAAC,CAAC;IACjD,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC;AAC/B,CAAC,CAAA,CAAC;AAHW,QAAA,MAAM,UAGjB"}
