@@ -24,7 +24,7 @@ newApp.use((req: Request, res: Response) => {
 
 newApp.use(
   (err: IResponseError, req: Request, res: Response, next: NextFunction) => {
-    res.status(err?.code ?? 500).json('server error');
+    res.status(err.code ?? 500).json(err.message ?? 'server error');
   }
 );
 
