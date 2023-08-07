@@ -1,13 +1,13 @@
-const express = require("express");
-const notesController = require("../../controllers/notes");
+import express from "express";
+import * as notesController from "../../controllers/notes";
 
 const router = express.Router();
 
-const { validateReqBody } = require('../../middlewares');
+import { validateReqBody } from '../../middlewares';
 
-const {schemas} = require('../../models/notes/note');
+import { schemas } from '../../models/notes/note';
 
-const { controllersWrapper } = require('../../utils');
+import { controllersWrapper } from '../../utils';
 
 
 

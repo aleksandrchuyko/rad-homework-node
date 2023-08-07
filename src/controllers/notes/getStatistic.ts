@@ -2,11 +2,10 @@ import { Request, Response } from 'express';
 
 const { Note } = require('../../models/notes/note');
 
-const getStatistic = async (req: Request, res: Response) => {
+export const getStatistic = async (req: Request, res: Response) => {
   const categoriesList = ['Task', 'Idea', 'Random Thought'];
   const queries: Promise<[]>[] = [];
   categoriesList.forEach((item) => {
-    // const name = category;
     const active = Note.aggregate([
       {
         $match: {
@@ -57,5 +56,3 @@ const getStatistic = async (req: Request, res: Response) => {
     res.status(200).json(result);
   });
 };
-
-module.exports = getStatistic;

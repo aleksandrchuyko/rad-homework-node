@@ -1,17 +1,8 @@
-const getAll = require('./getAll');
-const getById = require('./getById');
-const addNew = require('./addNew');
-const removeNote = require('./removeNote');
-const updateById = require('./updateById');
-const getStatistic = require('./getStatistic');
-const setMockCollection = require('./setMockCollection');
+export * from './getAll';
+export * from './getById';
+export * from './addNew';
+export * from './removeNote';
+export * from './updateById';
+export * from './getStatistic';
+export * from './setMockCollection';
 
-module.exports = {
-  getAll,
-  getById,
-  addNew,
-  removeNote,
-  updateById,
-  getStatistic,
-  setMockCollection,
-};

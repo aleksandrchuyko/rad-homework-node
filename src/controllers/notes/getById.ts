@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 
-const { Note } = require('../../models/notes/note');
-const { RequestError } = require('../../utils');
+import { Note } from '../../models/notes/note';
+import { RequestError } from '../../utils';
 
-const getById = async (req: Request, res: Response) => {
+export const getById = async (req: Request, res: Response) => {
   const { noteId } = req.params;
   const result = await Note.findOne({ _id: noteId });
   if (!result) {
@@ -11,5 +11,3 @@ const getById = async (req: Request, res: Response) => {
   }
   res.status(200).json(result);
 };
-
-module.exports = getById;

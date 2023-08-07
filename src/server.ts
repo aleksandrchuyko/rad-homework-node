@@ -2,12 +2,10 @@ const mongoose = require('mongoose');
 
 const app = require('./app');
 
-const {
-  DB_HOST = 'mongodb+srv://mongo_test:zBMynrWEGQVVu1lk@cluster0.2wvcorq.mongodb.net/db-notebook?retryWrites=true&w=majority',
-  PORT = 3000,
-} = process.env;
+const { DB_HOST, PORT } = process.env;
 
 mongoose
+  .set('strictQuery', true)
   .connect(DB_HOST)
   .then(() => {
     console.log('Database connection successful!');

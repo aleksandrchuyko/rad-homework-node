@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 
-const { Note } = require('../../models/notes/note');
-const { RequestError } = require('../../utils');
+import { Note } from '../../models/notes/note';
+import { RequestError } from '../../utils';
 
-const removeNote = async (req: Request, res: Response) => {
+export const removeNote = async (req: Request, res: Response) => {
   const { noteId } = req.params;
   const result = await Note.findByIdAndRemove(noteId);
   console.log(result);
@@ -12,5 +12,3 @@ const removeNote = async (req: Request, res: Response) => {
   }
   res.status(201).json(result);
 };
-
-module.exports = removeNote;
