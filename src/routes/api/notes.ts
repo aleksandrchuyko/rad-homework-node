@@ -25,5 +25,4 @@ router.patch("/:noteId", validateReqBody(schemas.addSchema), controllersWrapper(
 
 router.post("/set", controllersWrapper(notesController.setMockCollection));
 
-
-module.exports = router;
+export default router;

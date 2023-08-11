@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import { IResponseError } from 'interfaces';
 
-const notesRouter = require('./routes/api/notes');
+import notesRouter from './routes/api/notes';
 
 dotenv.config({ path: __dirname + '/.env' });
 
